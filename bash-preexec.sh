@@ -102,8 +102,8 @@ __bp_adjust_histcontrol() {
 __bp_preexec_interactive_mode=""
 
 # These arrays are used to add functions to be run before, or after, prompts.
-declare -a precmd_functions
-declare -a preexec_functions
+declare -a precmd_functions=("${precmd_functions[@]:-}")
+declare -a preexec_functions=("${preexec_functions[@]:-}")
 
 # Trims leading and trailing whitespace from $2 and writes it to the variable
 # name passed as $1
